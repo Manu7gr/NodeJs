@@ -6,7 +6,7 @@ orbs:
 jobs:
   one:
     build-and-push:
-	    - aws-ecr/build_and_push_image:
+      - aws-ecr/build_and_push_image:
           account-url: "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
           repo: "${AWS_RESOURCE_MAHESH_PREFIX}"
           region: ${AWS_DEFAULT_REGION}
