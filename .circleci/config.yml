@@ -6,6 +6,7 @@ orbs:
 jobs:
   one:
     build-and-push:
+    executor: machine
       - aws-ecr/build_and_push_image:
           account-url: "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
           repo: "${AWS_RESOURCE_MAHESH_PREFIX}"
@@ -16,7 +17,7 @@ jobs:
       - run: echo "testing"
   two:
     deploy:
-    executor: aws-eks/python
+    executor: machine
     steps:
       - aws-eks/install-helm-chart:
           chart: helm/expresscart
