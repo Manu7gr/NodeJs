@@ -17,11 +17,11 @@ jobs:
   two:
     deploy:
     executor: aws-eks/python
+    steps:
       - aws-eks/install-helm-chart:
           chart: helm/expresscart
           cluster-name: k8s
           release-name: staging
-    steps:
       - checkout
       - run: echo "Deploy test"  
 workflows:
