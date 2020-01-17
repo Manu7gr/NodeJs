@@ -16,6 +16,7 @@ jobs:
       - run: echo "testing"
   two:
     deploy:
+    executor: aws-eks/python
       - aws-eks/install-helm-chart:
           chart: helm/expresscart
           cluster-name: k8s
