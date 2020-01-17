@@ -12,8 +12,8 @@ jobs:
           region: ${AWS_DEFAULT_REGION}
           tag: ${CIRCLE_BUILD_NUM}
     steps:
-	    - checkout
-	    - run: echo "testing"
+      - checkout
+      - run: echo "testing"
   two:
     deploy:
       - aws-eks/install-helm-chart:
