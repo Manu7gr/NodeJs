@@ -13,7 +13,7 @@ workflows:
       - aws-eks/install-helm-chart:
           chart: stable/grafana
           cluster-name: Master
-          release-name: test
-          namespace: test
+          release-name: dev
+          namespace: dev
           requires:
             - aws-ecr/build_and_push_image 
